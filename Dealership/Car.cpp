@@ -1,5 +1,6 @@
 #include "Car.h"
 #include <string.h>
+#include <iostream>
 
 short int Car::instanceNumber = 0;
 
@@ -39,4 +40,9 @@ std::string Car::toString()
 	temp.append("\tPrice: ");
 	temp.append(std::to_string(price)); temp += '\n';
 	return temp;
+}
+
+void Car::print()
+{
+	std::cout << toString();
 }

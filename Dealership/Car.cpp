@@ -23,3 +23,20 @@ Car::~Car()
 	delete[] make;
 	delete[] model;
 }
+
+std::string Car::toString()
+{
+	std::string temp = "";
+	temp.append("The car with ID=");
+	temp.append(std::to_string(id));
+	temp.append(" has the following characteristics:\n");
+	temp.append("\tMake: ");
+	temp.append(make); temp += '\n';
+	temp.append("\tModel: ");
+	temp.append(model); temp += '\n';
+	temp.append("\tYear: ");
+	temp.append(std::to_string(year)); temp += '\n';
+	temp.append("\tPrice: ");
+	temp.append(std::to_string(price)); temp += '\n';
+	return temp;
+}

@@ -2,13 +2,16 @@
 class Car
 {
 private:
-	const static int id;
-	const char* make;
-	const char* model;
-	const int year;
-	double price;
+	const short int id;
+	char* make;
+	char* model;
+	short int year;
+	float price;
 public:
-	Car(char* make, char* model, int year, double price);
+	static short int instanceNumber;
+
+public:
+	Car(const char* make, const char* model, short int year, float price);
 	Car(const Car& source);
 	~Car();
 	int getId();

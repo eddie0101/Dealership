@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+
 class Car
 {
 private:
@@ -21,5 +23,6 @@ public:
 	double getPrice();
 	int getStockNumber();
 	void setPrice(double price);
+	std::string toString();
 };
 

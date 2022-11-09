@@ -25,6 +25,36 @@ Car::~Car()
 	delete[] model;
 }
 
+int Car::getId()
+{
+	return id;
+}
+
+char* Car::getMake()
+{
+	return make;
+}
+
+char* Car::getModel()
+{
+	return model;
+}
+
+int Car::getYear()
+{
+	return year;
+}
+
+double Car::getPrice()
+{
+	return price;
+}
+
+void Car::setPrice(double price)
+{
+	this->price = price;
+}
+
 std::string Car::toString()
 {
 	std::string temp = "";

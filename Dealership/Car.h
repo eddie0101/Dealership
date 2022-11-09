@@ -24,5 +24,6 @@ public:
 	int getStockNumber();
 	void setPrice(double price);
 	std::string toString();
+	void print();
 };
 

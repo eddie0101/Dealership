@@ -13,6 +13,7 @@ public:
 	static short int instanceNumber;
 
 public:
+	Car();
 	Car(const char* make, const char* model, short int year, float price);
 	Car(const Car& source);
 	~Car();

@@ -6,8 +6,6 @@ CarList::CarList()
 	head = NULL;
 	tail = NULL;
 	next = NULL;
-	next = NULL;
-	prev = NULL;
 	prev = NULL;
 }
 
@@ -20,10 +18,34 @@ void CarList::add(Car car)
 		tail = temp;
 	}
 	else {
+		temp->prev = tail;
+		temp->next = NULL;
 		tail->next = temp;
 		tail = tail->next;
-		tail->prev = temp;
-		tail->next = NULL;
+	}
+}
+
+void CarList::remove(unsigned id) {
+	CarList* p = head;
+	while (true) {
+		if (p->data->getId() == id) {
+			if (p != head && p != tail) {
+				p->prev->next = p->next;
+				p->next->prev = p->prev;
+				break;
+			}
+			else if (p == head) {
+				head = p->next;
+				p->next->prev = p->prev;
+				break;
+			}
+			else if (p == tail) {
+				tail = p->prev;
+				p->prev->next = p->next;
+				break;
+			}
+		}
+		p = p->next;
 	}
 }
 

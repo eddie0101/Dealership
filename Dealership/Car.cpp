@@ -46,7 +46,7 @@ Car::~Car()
 	delete[] model;
 }
 
-int Car::getId()
+unsigned Car::getId()
 {
 	return id;
 }
@@ -101,7 +101,7 @@ void Car::print()
 std::string Car::toString(double value)
 {
 	int iNr = value;
-	double dNr = value - iNr;
+	double dNr = value - iNr; 
 	int iNr2 = dNr * 100;
 	if (iNr2 == 0) {
 		return std::to_string(iNr);

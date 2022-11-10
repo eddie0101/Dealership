@@ -4,7 +4,7 @@
 class Car
 {
 private:
-	const short int id;
+	const unsigned id;
 	char* make;
 	char* model;
 	short int year;
@@ -17,7 +17,7 @@ public:
 	Car(const char* make, const char* model, short int year, float price);
 	Car(const Car& source);
 	~Car();
-	int getId();
+	unsigned getId();
 	char* getMake();
 	char* getModel();
 	int getYear();

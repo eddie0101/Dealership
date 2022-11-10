@@ -9,6 +9,7 @@ private:
 public:
 	Dealership();
 	void addCar(Car car);
+	void sellCar(unsigned int id);
 	void print();
 };
 

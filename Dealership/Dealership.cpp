@@ -1,4 +1,5 @@
 #include "Dealership.h"
+#include <iostream>
 
 Dealership::Dealership()
 {
@@ -12,5 +13,6 @@ void Dealership::addCar(Car car)
 
 void Dealership::print()
 {
+	std::cout << "  Welcome to C++ Dealership!  \n\n";
 	cars->print();
 }

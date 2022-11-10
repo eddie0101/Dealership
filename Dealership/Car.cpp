@@ -19,6 +19,17 @@ Car::Car(
 	this->price = price;
 }
 
+Car::Car(const Car& source) : id(source.id + 1)
+{
+	this->make = new char[strlen(source.make) + 1];
+	strcpy_s(this->make, strlen(source.make) + 1, source.make);
+	this->model = new char[strlen(source.model) + 1];
+	strcpy_s(this->model, strlen(source.model) + 1, source.model);
+	this->year = source.year;
+	this->price = source.price;
+	Car::instanceNumber++;
+}
+
 Car::~Car()
 {
 	delete[] make;

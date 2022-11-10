@@ -6,10 +6,10 @@ short int Car::instanceNumber = 0;
 
 Car::Car() : id(Car::instanceNumber++)
 {
-	make = new char;
-	make = NULL;
-	model = new char;
-	model = NULL;
+	make = new char[strlen("none") + 1];
+	strcpy_s(make, strlen("none") + 1, "none");
+	model = new char[strlen("none") + 1];
+	strcpy_s(model, strlen("none") + 1, "none");
 	year = 0;
 	price = 0;
 }

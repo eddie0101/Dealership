@@ -8,7 +8,7 @@ private:
 
 public:
 	Dealership();
-	void addCar();
+	void addCar(Car car);
 	void print();
 };
 

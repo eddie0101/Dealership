@@ -6,9 +6,9 @@ short int Car::instanceNumber = 0;
 
 Car::Car() : id(Car::instanceNumber++)
 {
-	make = new char[1];
+	make = new char;
 	make = NULL;
-	model = new char[1];
+	model = new char;
 	model = NULL;
 	year = 0;
 	price = 0;

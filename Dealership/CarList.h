@@ -12,6 +12,7 @@ public:
 
 	CarList();
 	void add(Car car);
+	void remove(unsigned id);
 	void print();
 };
 

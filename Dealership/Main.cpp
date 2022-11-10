@@ -11,4 +11,11 @@ int main() {
 	dealership->addCar(Car("Volkswagen", "Golf", 2012, 6000.799));
 	dealership->addCar(Car("BMW", "320i", 2016, 10000));
 	dealership->print();
+
+	unsigned input;
+	std::cout << "Please type the ID number of the car you want to buy: ";
+	std::cin >> input;
+	std::cout << std::endl;
+	dealership->sellCar(input);
+	dealership->print();
 }

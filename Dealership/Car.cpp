@@ -4,6 +4,16 @@
 
 short int Car::instanceNumber = 0;
 
+Car::Car() : id(Car::instanceNumber++)
+{
+	make = new char[1];
+	make = '\0';
+	model = new char[1];
+	model = '\0';
+	year = 0;
+	price = 0;
+}
+
 Car::Car(
 	const char* make, 
 	const char* model, 
@@ -85,5 +95,5 @@ std::string Car::toString()
 
 void Car::print()
 {
-	std::cout << toString();
+	std::cout << toString() << std::endl;
 }

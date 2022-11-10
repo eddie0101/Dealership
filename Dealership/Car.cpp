@@ -89,11 +89,22 @@ std::string Car::toString()
 	temp.append("\tYear: ");
 	temp.append(std::to_string(year)); temp += '\n';
 	temp.append("\tPrice: ");
-	temp.append(std::to_string(price)); temp += '\n';
+	temp.append(toString(price)); temp += '\n';
 	return temp;
 }
 
 void Car::print()
 {
 	std::cout << toString() << std::endl;
+}
+
+std::string Car::toString(double value)
+{
+	int iNr = value;
+	double dNr = value - iNr;
+	int iNr2 = dNr * 100;
+	if (iNr2 == 0) {
+		return std::to_string(iNr);
+	}
+	return std::to_string(iNr) + '.' + std::to_string(iNr2);
 }

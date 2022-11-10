@@ -26,5 +26,8 @@ public:
 	void setPrice(double price);
 	std::string toString();
 	void print();
+
+private:
+	std::string toString(double number);
 };
 
